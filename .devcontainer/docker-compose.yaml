@@ -1,0 +1,14 @@
+services:
+  aws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    # Monta el repositorio dentro del contenedor.
+    volumes:
+      - ..:/workspace:cached
+    working_dir: /workspace
+    # Credenciales: NO se inyectan aquí a propósito (ver setup-aws-profiles.sh).
+    #   - En Codespaces: usa los "Codespaces secrets" (llegan como variables de entorno).
+    #   - En local: crea un .env y deja que direnv lo cargue dentro del contenedor.
+    command: sleep infinity

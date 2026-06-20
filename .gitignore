@@ -1,0 +1,25 @@
+# Arnés del agente y diseño (no subir al remoto público)
+.agent/
+
+# Legacy: por si existían en versiones anteriores
+AGENTS.md
+briefing.md
+temario.md
+contexto.md
+propuesta.md
+diseno-pedagogico/
+curso.meta.json
+
+# Entorno local — credenciales (NO subir). .env.example y .envrc SÍ se versionan.
+.env
+infra/.env
+
+# Credenciales/identidad AWS locales
+.aws/
+
+# Terraform — estado y caché (el .terraform.lock.hcl y los *.tfvars SÍ se versionan)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log

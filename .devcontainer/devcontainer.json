@@ -1,0 +1,23 @@
+{
+  "name": "Terraform Avanzado (AWS) — Dev",
+  "dockerComposeFile": "./docker-compose.yaml",
+  "service": "aws",
+  "workspaceFolder": "/workspace",
+  "overrideCommand": true,
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": false,
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "hashicorp.terraform",
+        "redhat.ansible",
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup-aws-profiles.sh"
+}
